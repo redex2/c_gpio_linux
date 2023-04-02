@@ -12,9 +12,17 @@
 static char INPUT[] = "in";
 static char OUTPUT[] = "out";
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int gpio_init(unsigned int pin_number, char *mode);
 int gpio_mode(unsigned int pin_number, char *mode);
 int gpio_read(unsigned int pin_number);
 int gpio_set(unsigned int pin_number, bool value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
