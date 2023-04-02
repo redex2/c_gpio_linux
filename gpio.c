@@ -1,8 +1,4 @@
 #include "gpio.h"
-#include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
 
 int gpio_init(unsigned int pin_number, char *mode)
 {
@@ -52,7 +48,7 @@ int gpio_read(unsigned int pin_number)
 
 int gpio_set(unsigned int pin_number, bool value)
 {
-	char v[1];
+	char v[2];
 	sprintf(v, "%d", value);
 	
 	char str_pin[4];

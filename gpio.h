@@ -1,6 +1,12 @@
 #ifndef GPIO_H
 #define GPIO_H
 
+#include <stdbool.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+
 #define LOW 0
 #define HIGH 1
 static char INPUT[] = "in";
